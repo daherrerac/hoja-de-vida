@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="funciones">
+    <div>
+        <h1>
+            Actividad 1
+        </h1>
+        <button id="boton" onclick="funcionClic()">On click</button>
+    </div>
+    <div id="myDiv" onmouseenter="funcionMouseEnter()" onmouseleave="funcionMouseLeave()">
+        
+    </div>
+
+    <div id="myDiv2" onmouseover="funcionMouseOver()" ></div>
+        
+    </div>
+
+    <div id="caja">
+        <input type="text" id="myInput" onchange="funcionCambio()" value="" placeholder="ingrese texto">
+        <p id="contenido"></p>
+    </div>
+    
+    <div id="teclas">
+        <input type="text" id="inputField" placeholder="Escribe aquí...">
+
+        <div id="keyLog" class="log"></div>
+    </div>
+    <script>
+        const inputField = document.getElementById('inputField');
+        const keyLog = document.getElementById('keyLog');
+
+        // Evento keydown (cuando se presiona una tecla)
+        inputField.addEventListener('keydown', function(event) {
+            keyLog.innerHTML = `Presionada: ${event.key} `;
+        });
+
+        // Evento keyup (cuando se suelta una tecla)
+        inputField.addEventListener('keyup', function(event) {
+            keyLog.innerHTML = `Soltada: ${event.key} `;
+        });
+    </script>
+
+    <script src="ejercicio.js" ></script>
+</body>
+</html>
